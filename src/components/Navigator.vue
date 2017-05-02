@@ -19,8 +19,8 @@
           </p>
         </div>
         <ul class="passageTop" v-if="!isHome">
-          <p>顶部</p>
-          <p>评论</p>
+          <a href="#" @click.prevent="goTop()">顶部</a>
+          <a href="#" @click.prevent="goTop()">评论</a>
         </ul>
       </div>
       <div class="navBottom">
@@ -78,6 +78,9 @@
             return;
         }
         bus.$emit('category-change', category, isShow);
+      },
+      goTop(){
+        window.scrollTo(0, 0);
       }
     }
   }
@@ -133,5 +136,9 @@
   }
   .navBottom{
     border-top: var(--borderColor) solid 1px;
+  }
+  .passageTop a{
+    display: block;
+    margin: 0;
   }
 </style>
