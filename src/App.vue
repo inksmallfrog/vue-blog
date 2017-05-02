@@ -1,23 +1,35 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <navigator></navigator>
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import Navigator from './components/Navigator.vue'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Navigator
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import 'styles/iconfont.css';
+</style>
+
+<style scoped>
+  @import 'styles/_styleVariables.css';
+  body{
+    background: var(--backgroundColor);
+  }
+  .main{
+    margin-left: var(--navWidth);
+    margin-right: var(--mainMarginRight);
+    padding: var(--mainPadding);
+  }
 </style>

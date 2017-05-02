@@ -1,0 +1,19 @@
+/*
+* @Author: inksmallfrog
+* @Date:   2017-05-02 11:46:04
+* @Last Modified by:   inksmallfrog
+* @Last Modified time: 2017-05-02 13:42:48
+*/
+:root{
+  --backgroundColor: #eee;
+  --navWidth: 150px;
+  --navPadding: 25px;
+
+  --mainMarginRight: 50px;
+  --mainPadding: 20px;
+
+  --borderColor: #999;
+  --descColor: #666;
+
+  --transitionTime: .5s;
+}
